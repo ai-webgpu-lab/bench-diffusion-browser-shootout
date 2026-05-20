@@ -1,0 +1,109 @@
+repo=bench-diffusion-browser-shootout
+scenario=Diffusion Shootout / Fallback
+url_search=?mode=fallback
+captured_at=2026-05-20T15:37:03.205Z
+browser=Chromium 147.0.7727.15
+headless=true
+meta_scenario=diffusion-browser-shootout-fallback
+status=success
+
+[page-console]
+(none)
+
+[harness-logs]
+./reports/logs/02-diffusion-browser-shootout-fallback.log
+
+[result-json]
+{
+  "meta": {
+    "repo": "bench-diffusion-browser-shootout",
+    "commit": "78ad779",
+    "timestamp": "2026-05-20T15:37:03.067Z",
+    "owner": "ai-webgpu-lab",
+    "track": "benchmark",
+    "scenario": "diffusion-browser-shootout-fallback",
+    "notes": "winner=balanced-karras; promptTag=observatory-aurora-bench-v1; scheduler=dpmpp-2m-karras; resolution=768x512; seed=60; steps=21; previews=4; backend=cpu; fallback=true; automation=playwright-chromium",
+    "capture_context": {
+      "tool": "playwright-chromium",
+      "browser_name": "Chromium",
+      "browser_version": "147.0.7727.15",
+      "headless": true,
+      "captured_at": "2026-05-20T15:37:03.205Z",
+      "captured_by": "codex"
+    },
+    "capture_scenario_id": "02-diffusion-browser-shootout-fallback",
+    "capture_url_search": "?mode=fallback"
+  },
+  "environment": {
+    "browser": {
+      "name": "Chrome",
+      "version": "147.0.7727.15"
+    },
+    "os": {
+      "name": "Linux",
+      "version": "unknown"
+    },
+    "device": {
+      "name": "Linux x86_64",
+      "class": "desktop-high",
+      "cpu": "16 threads",
+      "memory_gb": 32,
+      "power_mode": "unknown"
+    },
+    "gpu": {
+      "adapter": "cpu-diffusion-fallback",
+      "required_features": [],
+      "limits": {}
+    },
+    "backend": "cpu",
+    "fallback_triggered": true,
+    "worker_mode": "main",
+    "cache_state": "warm"
+  },
+  "workload": {
+    "kind": "diffusion",
+    "name": "diffusion-browser-shootout-benchmark",
+    "input_profile": "768x512-24-steps-3-profiles",
+    "model_id": "balanced-karras",
+    "dataset": "diffusion-benchmark-fixture-v1"
+  },
+  "metrics": {
+    "common": {
+      "time_to_interactive_ms": 2099.4,
+      "init_ms": 655.74,
+      "success_rate": 1,
+      "peak_memory_note": "32 GB reported by browser",
+      "error_type": ""
+    },
+    "diffusion": {
+      "sec_per_image": 0.656,
+      "steps_per_sec": 54.51,
+      "resolution_success_rate": 0.82,
+      "oom_or_fail_rate": 0.18
+    }
+  },
+  "status": "success",
+  "artifacts": {
+    "raw_logs": [
+      "./reports/logs/02-diffusion-browser-shootout-fallback.log"
+    ],
+    "deploy_url": "https://ai-webgpu-lab.github.io/bench-diffusion-browser-shootout/",
+    "benchmark_adapter": {
+      "id": "deterministic-renderer-shootout",
+      "label": "Deterministic Renderer Shootout",
+      "version": "1.0.0",
+      "capabilities": [
+        "profile-comparison",
+        "winner-selection",
+        "fallback-pair"
+      ],
+      "benchmarkType": "synthetic",
+      "isReal": false,
+      "status": "deterministic",
+      "message": "Deterministic harness — replace by registering a real benchmark adapter."
+    },
+    "screenshots": [
+      "./reports/screenshots/02-diffusion-browser-shootout-fallback.png"
+    ]
+  }
+}
